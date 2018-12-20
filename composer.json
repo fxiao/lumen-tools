@@ -1,0 +1,24 @@
+{
+    "name": "fxiao/base-tools",
+    "description": "Laravel, Lumen 快速开发工具包",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": ">=7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Fxiao\\BaseTools\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"    
+        ]
+    },
+    "authors": [
+        {
+            "name": "fxiao",
+            "email": "heyun51@qq.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,23 @@
+<?php
+
+namespace DummyNamespace;
+
+use Illuminate\Database\Eloquent\Model;
+DummyImportSoftDeletesTrait
+
+class DummyClass extends Model
+{
+    DummyUseSoftDeletesTrait
+
+    DummyModelTable
+
+    DummyModelKey
+
+    DummyTimestamp
+
+    protected $fillable = [
+        DummyFieldFill
+    ];
+DummyRelations
+
+}

@@ -1,0 +1,13 @@
+<?php
+
+namespace DummyNamespace;
+
+use League\Fractal\ParamBag;
+
+class DummyClass extends BaseTransformer
+{
+    protected $availableIncludes = [
+        DummyFieldFill
+    ];
+DummyRelations
+}

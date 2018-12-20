@@ -1,0 +1,54 @@
+<?php
+
+namespace DummyNamespace;
+
+use DummyModelNamespace;
+use DummyTransformerNamespace;
+use Illuminate\Http\Request;
+
+class DummyClass extends BaseController
+{
+    public function __construct()
+    {
+        $this->route_prefix = 'DummyTableName';
+        $this->model = new DummyModel();
+        $this->transformer = new DummyTransformer();
+    }
+
+    public function title()
+    {
+        return [
+            'id' => 'ID',
+            DummyTitle
+            'created_at' => '创建时间',
+            'updated_at' => '更新时间'
+        ];
+    }
+
+    public function storeValidator(Request $request)
+    {
+        return \Validator::make($this->fieldOnly($request), [
+            DummyStoreRule
+        ]);
+    }
+
+    public function updateValidator(Request $request)
+    {
+        return \Validator::make($this->fieldOnly($request), [
+            DummyUpdateRule
+        ]);
+    }
+
+    public function fieldOnly(Request $request)
+    {
+        return $request->only(
+            DummyfieldOnly
+        );
+    }
+
+/*
+{
+    DummyJson
+}
+*/
+}

@@ -1,0 +1,55 @@
+<?php
+
+/*
+|--------------------------------------------------------------------------
+| Application Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register all of the routes for an application.
+| It is a breeze. Simply tell Lumen the URIs it should respond to
+| and give it the Closure to call when that URI is requested.
+|
+ */
+// v1 version API
+// add in header    Accept:application/vnd.lumen.v1+json
+$api = app('Dingo\Api\Routing\Router');
+
+$api->version('v1', [
+    'namespace' => 'DummyControllerNamespace',
+    'middleware' => [
+        'serializer',
+        'api.throttle',
+    ],
+    // each route have a limit of 20 of 1 minutes
+    'limit' => app('config')['app']['rate_limit'], 'expires' => 1,
+], function ($api) {
+
+    // need authentication
+    $api->group(['middleware' => 'api.auth'], function ($api) {
+
+        $api->post('DummyRoute', [
+            'as' => 'DummyPxRoute.store',
+            'uses' => 'DummyController@store',
+        ]);
+
+        $api->get('DummyRoute', [
+            'as' => 'DummyPxRoute.index',
+            'uses' => 'DummyController@index',
+        ]);
+
+        $api->get('DummyRoute/{id}', [
+            'as' => 'DummyPxRoute.show',
+            'uses' => 'DummyController@show',
+        ]);
+
+        $api->patch('DummyRoute/{id}', [
+            'as' => 'DummyPxRoute.update',
+            'uses' => 'DummyController@update',
+        ]);
+
+        $api->delete('DummyRoute/{id}', [
+            'as' => 'DummyPxRoute.destroy',
+            'uses' => 'DummyController@destroy',
+        ]);
+    });
+});

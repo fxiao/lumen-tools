@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>脚手架</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/iCheck/1.0.2/skins/minimal/_all.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/select2/4.0.5/css/select2.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/admin-lte/2.4.8/css/AdminLTE.min.css" rel="stylesheet">
+
+    <!-- REQUIRED JS SCRIPTS -->
+    <script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+
+<body class="hold-transition skin-blue sidebar-mini fixed">
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-primary">
+            <div class="box-header with-border">
+                <h3 class="box-title">脚手架</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <form method="post" action="/dev-helpers" id="scaffold">
+                    <div class="box-body">
+                        <div class="form-horizontal">
+                            <div class="form-group">
+                                <label for="inputTableName" class="col-sm-1 control-label">表名</label>
+                                <div class="col-sm-4">
+                                    <input type="text" name="table_name" class="form-control" id="inputTableName" placeholder="table name" value="">
+                                </div>
+                                <span class="help-block hide" id="table-name-help">
+                                    &nbsp; 表名不能为空！ 
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-offset-1 col-sm-11">
+                                    <div class="checkbox">
+                                        <label>
+                                            <input type="checkbox" checked value="migration" name="create[]" /> 创建 migration
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" checked value="model" name="create[]" /> 创建 Model 
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" checked value="controller" name="create[]" />创建 Controller 
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" checked value="migrate" name="create[]" /> 运行 migrate
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" checked value="transformer" name="create[]" />创建 Transformer 
+                                        </label>
+                                        <label>
+                                            <input type="checkbox" checked value="route" name="create[]" />创建 route
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <h4>字段</h4>
+
+                        <table class="table table-hover" id="table-fields">
+                            <tbody>
+                            <tr>
+                                <th style="width: 200px">字段名</th>
+                                <th>类型</th>
+                                <th>为空</th>
+                                <th>Key</th>
+                                <th>默认值</th>
+                                <th>注释</th>
+                                <th>操作</th>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <input type="text" name="fields[0][name]" class="form-control" placeholder="field name" />
+                                </td>
+                                <td>
+                                    <select style="width: 200px" name="fields[0][type]">
+                                        <option value="string">string</option>
+                                        <option value="integer">integer</option>
+                                        <option value="text">text</option>
+                                        <option value="float">float</option>
+                                        <option value="double">double</option>
+                                        <option value="decimal">decimal</option>
+                                        <option value="boolean">boolean</option>
+                                        <option value="date">date</option>
+                                        <option value="time">time</option>
+                                        <option value="dateTime">dateTime</option>
+                                        <option value="timestamp">timestamp</option>
+                                        <option value="char">char</option>
+                                        <option value="mediumText">mediumText</option>
+                                        <option value="longText">longText</option>
+                                        <option value="tinyInteger">tinyInteger</option>
+                                        <option value="smallInteger">smallInteger</option>
+                                        <option value="mediumInteger">mediumInteger</option>
+                                        <option value="bigInteger">bigInteger</option>
+                                        <option value="unsignedTinyInteger">unsignedTinyInteger</option>
+                                        <option value="unsignedSmallInteger">unsignedSmallInteger</option>
+                                        <option value="unsignedMediumInteger">unsignedMediumInteger</option>
+                                        <option value="unsignedInteger">unsignedInteger</option>
+                                        <option value="unsignedBigInteger">unsignedBigInteger</option>
+                                        <option value="enum">enum</option>
+                                        <option value="json">json</option>
+                                        <option value="jsonb">jsonb</option>
+                                        <option value="dateTimeTz">dateTimeTz</option>
+                                        <option value="timeTz">timeTz</option>
+                                        <option value="timestampTz">timestampTz</option>
+                                        <option value="nullableTimestamps">nullableTimestamps</option>
+                                        <option value="binary">binary</option>
+                                        <option value="ipAddress">ipAddress</option>
+                                        <option value="macAddress">macAddress</option>
+                                    </select>
+                                </td>
+                                <td><input type="checkbox" name="fields[0][nullable]" /></td>
+                                <td>
+                                    <select style="width: 150px" name="fields[0][key]">
+
+                                        <option value="" selected>NULL</option>
+                                        <option value="unique">Unique</option>
+                                        <option value="index">Index</option>
+                                    </select>
+                                </td>
+                                <td><input type="text" class="form-control" placeholder="default value" name="fields[0][default]"></td>
+                                <td><input type="text" class="form-control" placeholder="comment" name="fields[0][comment]"></td>
+                                <td><a class="btn btn-sm btn-danger table-field-remove">删除</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <hr style="margin-top: 0;"/>
+
+                        <div class='form-inline margin' style="width: 100%">
+
+
+                            <div class='form-group'>
+                                <button type="button" class="btn btn-sm btn-success" id="add-table-field">增加字段</button>
+                            </div>
+
+                            <div class='form-group pull-right' style="margin-right: 20px; margin-top: 5px;">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" checked name="timestamps"> Created_at & Updated_at
+                                    </label>
+                                    &nbsp;&nbsp;
+                                    <label>
+                                        <input type="checkbox" name="soft_deletes">&nbsp;&nbsp;软删除 
+                                    </label>
+
+                                </div>
+                            </div>
+
+                            <div class="form-group pull-right" style="margin-right: 20px;">
+                                <label for="inputPrimaryKey">Primary key</label>
+                                <input type="text" name="primary_key" class="form-control" id="inputPrimaryKey" placeholder="Primary key" value="id" style="width: 100px;">
+                            </div>
+
+                        </div>
+
+                        <hr />
+
+                        <h4>模型关联</h4>
+
+                        <table class="table table-hover" id="model-relations" style="width: 800px">
+                            <tbody>
+                            <tr>
+                                <th style="width: 30%">关联表名</th>
+                                <th style="width: 30%">类型</th>
+                                <th>操作</th>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <hr style="margin-top: 0;"/>
+
+                        <div class='form-inline margin' style="width: 100%">
+                            <div class='form-group'>
+                                <button type="button" class="btn btn-sm btn-success" id="add-model-relation">增加关联</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- /.box-body -->
+                    <div class="box-footer">
+                        <button type="submit" class="btn btn-info pull-right">提交</button>
+                    </div>
+
+                    <!-- /.box-footer -->
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+
+        <template id="table-field-tpl">
+        <tr>
+            <td>
+<input type="text" name="fields[__index__][name]" class="form-control" placeholder="field name" />
+            </td>
+            <td>
+<select style="width: 200px" name="fields[__index__][type]">
+    <option value="string">string</option>
+    <option value="integer">integer</option>
+    <option value="text">text</option>
+    <option value="float">float</option>
+    <option value="double">double</option>
+    <option value="decimal">decimal</option>
+    <option value="boolean">boolean</option>
+    <option value="date">date</option>
+    <option value="time">time</option>
+    <option value="dateTime">dateTime</option>
+    <option value="timestamp">timestamp</option>
+    <option value="char">char</option>
+    <option value="mediumText">mediumText</option>
+    <option value="longText">longText</option>
+    <option value="tinyInteger">tinyInteger</option>
+    <option value="smallInteger">smallInteger</option>
+    <option value="mediumInteger">mediumInteger</option>
+    <option value="bigInteger">bigInteger</option>
+    <option value="unsignedTinyInteger">unsignedTinyInteger</option>
+    <option value="unsignedSmallInteger">unsignedSmallInteger</option>
+    <option value="unsignedMediumInteger">unsignedMediumInteger</option>
+    <option value="unsignedInteger">unsignedInteger</option>
+    <option value="unsignedBigInteger">unsignedBigInteger</option>
+    <option value="enum">enum</option>
+    <option value="json">json</option>
+    <option value="jsonb">jsonb</option>
+    <option value="dateTimeTz">dateTimeTz</option>
+    <option value="timeTz">timeTz</option>
+    <option value="timestampTz">timestampTz</option>
+    <option value="nullableTimestamps">nullableTimestamps</option>
+    <option value="binary">binary</option>
+    <option value="ipAddress">ipAddress</option>
+    <option value="macAddress">macAddress</option>
+</select>
+            </td>
+            <td><input type="checkbox" name="fields[__index__][nullable]" /></td>
+            <td>
+<select style="width: 150px" name="fields[__index__][key]">
+    <option value="" selected>NULL</option>
+    <option value="unique">Unique</option>
+    <option value="index">Index</option>
+</select>
+            </td>
+            <td><input type="text" class="form-control" placeholder="default value" name="fields[__index__][default]"></td>
+            <td><input type="text" class="form-control" placeholder="comment" name="fields[__index__][comment]"></td>
+            <td><a class="btn btn-sm btn-danger table-field-remove"> 删除</a></td>
+        </tr>
+        </template>
+
+        <template id="model-relation-tpl">
+        <tr>
+            <td>
+<input type="text" name="relations[__index__][relation]" class="form-control" placeholder="relation table name" />
+            </td>
+            <td>
+<select style="width: 200px" name="relations[__index__][type]">
+    <option value="hasOne" selected>hasOne</option>
+    <option value="belongsTo">belongsTo</option>
+    <option value="hasMany">hasMany</option>
+    <option value="belongsToMany">belongsToMany</option>
+</select>
+            </td>
+            <td><a class="btn btn-sm btn-danger model-relation-remove">删除</a></td>
+        </tr>
+        </template>
+
+<script>
+
+$(function () {
+
+        $('input[type=checkbox]').iCheck({checkboxClass:'icheckbox_minimal-blue'});
+        $('select').select2();
+
+        $('#add-table-field').click(function (event) {
+            $('#table-fields tbody').append($('#table-field-tpl').html().replace(/__index__/g, $('#table-fields tr').length - 1));
+            $('select').select2();
+            $('input[type=checkbox]').iCheck({checkboxClass:'icheckbox_minimal-blue'});
+            });
+
+        $('#table-fields').on('click', '.table-field-remove', function(event) {
+            $(event.target).closest('tr').remove();
+            });
+
+        $('#add-model-relation').click(function (event) {
+            $('#model-relations tbody').append($('#model-relation-tpl').html().replace(/__index__/g, $('#model-relations tr').length - 1));
+            $('select').select2();
+            $('input[type=checkbox]').iCheck({checkboxClass:'icheckbox_minimal-blue'});
+            });
+
+        $('#model-relations').on('click', '.model-relation-remove', function(event) {
+                $(event.target).closest('tr').remove();
+                });
+
+        $('#scaffold').on('submit', function (event) {
+
+                //event.preventDefault();
+
+                if ($('#inputTableName').val() == '') {
+                $('#inputTableName').closest('.form-group').addClass('has-error');
+                $('#table-name-help').removeClass('hide');
+
+                return false;
+                }
+
+                return true;
+                });
+});
+
+</script>
+<!-- ./wrapper -->
+
+<!-- REQUIRED JS SCRIPTS -->
+<script src="https://cdn.bootcss.com/iCheck/1.0.2/icheck.min.js"></script>
+<script src="https://cdn.bootcss.com/select2/4.0.5/js/select2.full.min.js"></script>
+
+</body>
+</html>
