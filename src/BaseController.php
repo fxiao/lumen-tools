@@ -1,6 +1,6 @@
 <?php
 
-namespace Fxiao\BaseTools;
+namespace Fxiao\LumenTools;
 
 use Illuminate\Http\Request;
 

@@ -8,7 +8,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Fxiao\\BaseTools\\": "src/"
+            "Fxiao\\LumenTools\\": "src/"
         },
         "files": [
             "src/helpers.php"    

@@ -1,1 +1,1 @@
-# Laravel, Lumen 快速开发工具包
+# Lumen 快速开发工具包

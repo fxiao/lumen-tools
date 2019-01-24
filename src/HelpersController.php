@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Controllers\V1;
+namespace Fxiao\LumenTools;
 
 use Illuminate\Http\Request;
-use App\Controllers\Controller;
 use Illuminate\Support\MessageBag;
 use Illuminate\Support\Facades\Artisan;
-use App\Controllers\Scaffold\ModelCreator;
-use App\Controllers\Scaffold\ControllerCreator;
-use App\Controllers\Scaffold\TransformerCreator;
-use App\Controllers\Scaffold\MigrationCreator;
-use App\Controllers\Scaffold\RouteCreator;
+use Fxiao\LumenTools\Scaffold\ModelCreator;
+use Fxiao\LumenTools\Scaffold\ControllerCreator;
+use Fxiao\LumenTools\Scaffold\TransformerCreator;
+use Fxiao\LumenTools\Scaffold\MigrationCreator;
+use Fxiao\LumenTools\Scaffold\RouteCreator;
 
 class HelpersController extends Controller
 {
