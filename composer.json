@@ -5,11 +5,8 @@
     "license": "MIT",
     "require": {
         "php": ">=7.1",
-        "tymon/jwt-auth": "^1.0.0-rc.3",
-        "dingo/api": "^2.0.0-beta1",
         "symfony/var-dumper": "^4.2",
         "albertcht/lumen-helpers": "^0.6",
-        "liyu/dingo-serializer-switch": "^0.3"
     },
     "autoload": {
         "psr-4": {
