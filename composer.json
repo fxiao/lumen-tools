@@ -10,7 +10,7 @@
         "symfony/var-dumper": "^4.2",
         "albertcht/lumen-helpers": "^0.6",
         "liyu/dingo-serializer-switch": "^0.3"
-    }
+    },
     "autoload": {
         "psr-4": {
             "Fxiao\\LumenTools\\": "src/"
