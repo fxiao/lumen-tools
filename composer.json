@@ -6,7 +6,7 @@
     "require": {
         "php": ">=7.1",
         "symfony/var-dumper": "^4.2",
-        "albertcht/lumen-helpers": "^0.6",
+        "albertcht/lumen-helpers": "^0.6"
     },
     "autoload": {
         "psr-4": {
