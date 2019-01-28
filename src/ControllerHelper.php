@@ -4,7 +4,7 @@ namespace Fxiao\LumenTools;
 
 use Illuminate\Http\Request;
 
-trait BaseControllerHelper
+trait ControllerHelper
 {
     protected $route_prefix; // 路由别名的前缀，如 configs.show
     protected $model; // 主模型实例

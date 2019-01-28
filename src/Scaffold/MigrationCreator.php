@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Controllers\Scaffold;
+namespace Fxiao\LumenTools\Scaffold;
 
 use Illuminate\Database\Migrations\MigrationCreator as BaseMigrationCreator;
 
