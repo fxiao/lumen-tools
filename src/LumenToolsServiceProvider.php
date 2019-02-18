@@ -17,15 +17,18 @@ class LumenToolsServiceProvider extends ServiceProvider
     {
         $api = app('Dingo\Api\Routing\Router');
 
-        $api->get('/dev-helpers', [
-            'as' => 'helpers.index',
-            'uses' => '\Fxiao\LumenTools\HelpersController@index',
-        ]);
+        $api->version('v1', [], function ($api) {
+            $api->get('/dev-helpers', [
+                'as' => 'helpers.index',
+                'uses' => '\Fxiao\LumenTools\HelpersController@index',
+            ]);
 
-        $api->post('/dev-helpers', [
-            'as' => 'helpers.store',
-            'uses' => '\Fxiao\LumenTools\HelpersController@store',
-        ]);
+            $api->post('/dev-helpers', [
+                'as' => 'helpers.store',
+                'uses' => '\Fxiao\LumenTools\HelpersController@store',
+            ]);
+
+        });
         
     }
 }
