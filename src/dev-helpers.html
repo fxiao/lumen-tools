@@ -33,7 +33,7 @@
                             <div class="form-group">
                                 <label for="inputTableName" class="col-sm-1 control-label">名称</label>
                                 <div class="col-sm-4">
-                                    <input type="text" name="table_name" class="form-control" id="inputTableName" placeholder="table name" value="">
+                                    <input type="text" name="table_name" class="form-control" id="inputTableName" placeholder="name" value="">
                                 </div>
                                 <span class="help-block hide" id="table-name-help">
                                     &nbsp; 名称不能为空！ 
@@ -174,7 +174,7 @@
                         <table class="table table-hover" id="model-relations" style="width: 800px">
                             <tbody>
                             <tr>
-                                <th style="width: 30%">关联表名</th>
+                                <th style="width: 30%">关联名称</th>
                                 <th style="width: 30%">类型</th>
                                 <th>操作</th>
                             </tr>
@@ -266,7 +266,7 @@
         <template id="model-relation-tpl">
         <tr>
             <td>
-<input type="text" name="relations[__index__][relation]" class="form-control" placeholder="relation table name" />
+<input type="text" name="relations[__index__][relation]" class="form-control" placeholder="relation name" />
             </td>
             <td>
 <select style="width: 200px" name="relations[__index__][type]">

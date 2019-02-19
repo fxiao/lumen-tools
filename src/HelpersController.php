@@ -47,8 +47,11 @@ class HelpersController extends Controller
             $controller_name = (env('DEV_HELPERS_CONTROLLER_PATH', 'App\\Http\\Controllers\\')
                 ?: 'App\\Http\\Controllers\\') . $class_name . 'Controller';
 
-            $transformer_name = (env('DEV_HELPERS_TRANSFORMER_PATH', 'App\\Transformers\\') 
-                ?: 'App\\Transformers\\') . ($relations ? $class_name : 'Base') . 'Transformer';
+            $transformer_name = 'Fxiao\\LumenTools\\BaseTransformer';
+            if ($relations) {
+                $transformer_name = (env('DEV_HELPERS_TRANSFORMER_PATH', 'App\\Transformers\\') 
+                ?: 'App\\Transformers\\') . $class_name . 'Transformer';
+            }
 
             $route_name = (env('DEV_HELPERS_ROUTE_PATH', 'routes\\')
                 ?: 'routes\\') . $name;

@@ -5,6 +5,7 @@ namespace DummyNamespace;
 use DummyModelNamespace;
 use DummyTransformerNamespace;
 use Illuminate\Http\Request;
+use Fxiao\LumenTools\Controller;
 use Fxiao\LumenTools\ControllerHelper;
 
 class DummyClass extends Controller

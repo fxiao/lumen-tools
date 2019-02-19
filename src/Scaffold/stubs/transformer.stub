@@ -3,6 +3,7 @@
 namespace DummyNamespace;
 
 use League\Fractal\ParamBag;
+use Fxiao\LumenTools\BaseTransformer;
 
 class DummyClass extends BaseTransformer
 {

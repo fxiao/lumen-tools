@@ -21,10 +21,6 @@ trait ControllerHelper
 
         $response = $this->response->paginator($models, $this->transformer($request));
 
-        if ($request->headers->get('shows') == 'title') {
-            $response = $response->addMeta('title', $this->title());
-        }
-
         return $response;
     }
 
