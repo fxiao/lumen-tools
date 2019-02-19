@@ -5,24 +5,17 @@ namespace DummyNamespace;
 use DummyModelNamespace;
 use DummyTransformerNamespace;
 use Illuminate\Http\Request;
+use Fxiao\LumenTools\ControllerHelper;
 
-class DummyClass extends BaseController
+class DummyClass extends Controller
 {
+    use ControllerHelper;
+
     public function __construct()
     {
         $this->route_prefix = 'DummyTableName';
         $this->model = new DummyModel();
         $this->transformer = new DummyTransformer();
-    }
-
-    public function title()
-    {
-        return [
-            'id' => 'ID',
-            DummyTitle
-            'created_at' => '创建时间',
-            'updated_at' => '更新时间'
-        ];
     }
 
     public function storeValidator(Request $request)

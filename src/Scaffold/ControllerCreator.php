@@ -88,7 +88,6 @@ class ControllerCreator
             'DummyTransformerNamespace', 
             'DummyTransformer',  
             'DummyfieldOnly', 
-            'DummyTitle',
             'DummyStoreRule',
             'DummyUpdateRule',
             'DummyJson'
@@ -99,7 +98,6 @@ class ControllerCreator
             $transformer_name, 
             class_basename($transformer_name),  
             $this->bluePrintForm, 
-            $this->bluePrintTitle,
             $this->bluePrintStoreRule,
             $this->bluePrintUpdateRule,
             $this->bluePrintJson
@@ -208,7 +206,6 @@ class ControllerCreator
 
         $this->bluePrintForm = trim(implode(str_repeat(' ', 12), $rows_form), ",\n");
         $this->bluePrintJson = trim(implode(str_repeat(' ', 4), $rows_json), ",\n");
-        $this->bluePrintTitle = trim(implode(str_repeat(' ', 12), $rows_title), "\n");
 
         $this->bluePrintStoreRule = trim(implode(str_repeat(' ', 12), $rows_store_rule), "\n");
         $this->bluePrintUpdateRule = trim(implode(str_repeat(' ', 12), $rows_update_rule), "\n");
