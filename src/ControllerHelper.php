@@ -46,10 +46,10 @@ trait ControllerHelper
         $model = $this->model->create($this->fieldOnly($request));
 
         // 201 with location
-        $location = dingo_route('v1', $this->route_prefix.'.show', $model->id);
+        //$location = dingo_route('v1', $this->route_prefix.'.show', $model->id);
 
         return $this->response->item($model, $this->transformer($request))
-            ->header('Location', $location)
+            //->header('Location', $location)
             ->setStatusCode(201);
     }
 
