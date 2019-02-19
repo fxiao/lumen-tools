@@ -36,8 +36,9 @@ class HelpersController extends Controller
 
         try {
 
-            $table_name = $request->get('table_name'); 
-            $class_name = table_to_model($table_name); 
+            $name = $request->get('table_name'); 
+            $table_name = \Illuminate\Support\Str::plural($name); 
+            $class_name = table_to_model($name); 
             $relations = $request->get('relations', []);
 
             $model_name = (env('DEV_HELPERS_MODELS_PATH', 'App\\Models\\') 
@@ -50,7 +51,7 @@ class HelpersController extends Controller
                 ?: 'App\\Transformers\\') . ($relations ? $class_name : 'Base') . 'Transformer';
 
             $route_name = (env('DEV_HELPERS_ROUTE_PATH', 'routes\\')
-                ?: 'routes\\') . $table_name;
+                ?: 'routes\\') . $name;
 
             // 1. Create model.
             if (in_array('model', $request->get('create'))) {
@@ -65,7 +66,7 @@ class HelpersController extends Controller
 
             // 2. Create controller.
             if (in_array('controller', $request->get('create'))) {
-                $paths['controller'] = (new ControllerCreator($controller_name, $table_name))
+                $paths['controller'] = (new ControllerCreator($controller_name, $name))
                     ->buildBluePrint($request->get('fields'))
                     ->create($model_name, $transformer_name);
             }
@@ -110,33 +111,5 @@ class HelpersController extends Controller
 
         dump($paths);
         return $this->index($request);
-    }
-
-    protected function backWithException(\Exception $exception)
-    {
-        $error = new MessageBag([
-            'title'   => 'Error',
-            'message' => $exception->getMessage(),
-        ]);
-
-        //return back()->withInput()->with(compact('error'));
-    }
-
-    protected function backWithSuccess($paths, $message)
-    {
-        $messages = [];
-
-        foreach ($paths as $name => $path) {
-            $messages[] = ucfirst($name).": $path";
-        }
-
-        $messages[] = "<br />$message";
-
-        $success = new MessageBag([
-            'title'   => 'Success',
-            'message' => implode('<br />', $messages),
-        ]);
-
-        //return back()->with(compact('success'));
     }
 }
