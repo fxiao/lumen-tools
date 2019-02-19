@@ -37,7 +37,7 @@ class HelpersController extends Controller
         try {
 
             $name = $request->get('table_name'); 
-            $table_name = \Illuminate\Support\Str::plural($name); 
+            $table_name = str_plural($name); 
             $class_name = table_to_model($name); 
             $relations = $request->get('relations', []);
 
