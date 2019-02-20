@@ -13,24 +13,6 @@ if (! function_exists('auth_user')) {
     }
 }
 
-if (! function_exists('dingo_route')) {
-    /**
-     * 根据别名获得url.
-     *
-     * @param string $version
-     * @param string $name
-     * @param string $params
-     *
-     * @return string
-     */
-    function dingo_route($version, $name, $params = [])
-    {
-        return app('Dingo\Api\Routing\UrlGenerator')
-            ->version($version)
-            ->route($name, $params);
-    }
-}
-
 if (! function_exists('trans')) {
     /**
      * Translate the given message.
@@ -109,22 +91,6 @@ if (! function_exists('str_equal')) {
         }
 
         return (strtolower((string) $foo) === strtolower((string) $bar));
-    }
-}
-
-if (! function_exists('table_to_model')) {
-    /**
-     * 根据 表名 生成 模型名
-     * @param $table string
-     * @return $model string
-     */
-    function table_to_model(string $table): string {
-        $model = '';
-        foreach(explode('_', $table) as $mn) {
-            $model .= ucwords($mn);
-        } 
-
-        return $model;
     }
 }
 

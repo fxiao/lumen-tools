@@ -38,7 +38,7 @@ class HelpersController extends Controller
 
             $name = $request->get('table_name'); 
             $table_name = str_plural($name); 
-            $class_name = table_to_model($name); 
+            $class_name = studly_case($name); 
             $relations = $request->get('relations', []);
 
             $model_name = (env('DEV_HELPERS_MODELS_PATH', 'App\\Models\\') 
