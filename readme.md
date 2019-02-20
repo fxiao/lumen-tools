@@ -61,6 +61,8 @@ DEV_HELPERS_TRANSFORMER_PATH=
 DEV_HELPERS_ROUTE_PATH=
 ```
 
+之后，在 `bootstrap/app.php` 中添加 `$app->register(Fxiao\LumenTools\LumenToolsServiceProvider::class);` 
+
 ## 脚手架使用
 
 URL：`/dev-helpers`
