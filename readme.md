@@ -44,9 +44,7 @@
 composer require fxiao/lumen-tools
 ```
 
-## 脚手架
-
-URL：`/dev-helpers`
+## 脚手架配置
 
 `.env` 同时 设置 `APP_DEBUG=true` 和 `DEV_HELPERS=true` 有效，如：
 
@@ -62,3 +60,9 @@ DEV_HELPERS_TRANSFORMER_PATH=
 # routes\
 DEV_HELPERS_ROUTE_PATH=
 ```
+
+## 脚手架使用
+
+URL：`/dev-helpers`
+
+表名 为复数，生成的模型和控制器名称自动转换为 单数

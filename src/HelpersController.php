@@ -36,8 +36,8 @@ class HelpersController extends Controller
 
         try {
 
-            $name = $request->get('table_name'); 
-            $table_name = str_plural($name); 
+            $table_name = $request->get('table_name'); 
+            $name = str_singular($table_name); 
             $class_name = studly_case($name); 
             $relations = $request->get('relations', []);
 
@@ -54,7 +54,7 @@ class HelpersController extends Controller
             }
 
             $route_name = (env('DEV_HELPERS_ROUTE_PATH', 'routes\\')
-                ?: 'routes\\') . $name;
+                ?: 'routes\\') . $table_name;
 
             // 1. Create model.
             if (in_array('model', $request->get('create'))) {
@@ -69,7 +69,7 @@ class HelpersController extends Controller
 
             // 2. Create controller.
             if (in_array('controller', $request->get('create'))) {
-                $paths['controller'] = (new ControllerCreator($controller_name, $name))
+                $paths['controller'] = (new ControllerCreator($controller_name, $table_name))
                     ->buildBluePrint($request->get('fields'))
                     ->create($model_name, $transformer_name);
             }

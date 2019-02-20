@@ -31,12 +31,12 @@
                     <div class="box-body">
                         <div class="form-horizontal">
                             <div class="form-group">
-                                <label for="inputTableName" class="col-sm-1 control-label">名称</label>
+                                <label for="inputTableName" class="col-sm-1 control-label">表名</label>
                                 <div class="col-sm-4">
-                                    <input type="text" name="table_name" class="form-control" id="inputTableName" placeholder="name" value="">
+                                    <input type="text" name="table_name" class="form-control" id="inputTableName" placeholder="table name" value="">
                                 </div>
                                 <span class="help-block hide" id="table-name-help">
-                                    &nbsp; 名称不能为空！ 
+                                    &nbsp; 表名不能为空！ 
                                 </span>
                             </div>
                             <div class="form-group">
@@ -266,7 +266,7 @@
         <template id="model-relation-tpl">
         <tr>
             <td>
-<input type="text" name="relations[__index__][relation]" class="form-control" placeholder="relation name" />
+<input type="text" name="relations[__index__][relation]" class="form-control" placeholder="模型名称" />
             </td>
             <td>
 <select style="width: 200px" name="relations[__index__][type]">
