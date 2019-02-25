@@ -125,7 +125,7 @@ class TransformerCreator
 
         $rows_form = []; 
         foreach ($relations as $relation) {
-            $class_name = table_to_model($relation['relation']);
+            $class_name = studly_case(str_singular($relation['relation']));
             $func_name = lcfirst($class_name);
             $rows_form[] = "'{$func_name}',\n";
         }
@@ -154,7 +154,7 @@ class TransformerCreator
 
     protected function dummyFunctionOne($relation)
     {
-        $class_name = table_to_model($relation['relation']);
+        $class_name = studly_case(str_singular($relation['relation']));
         $func_name = lcfirst($class_name);
         $relation_name = $relation['type'];
 
@@ -172,7 +172,7 @@ EOC;
 
     protected function dummyFunctionMany($relation, $model)
     {
-        $class_name = table_to_model($relation['relation']);
+        $class_name = studly_case(str_singular($relation['relation']));
         $func_name = lcfirst($class_name);
         $relation_name = $relation['type'];
 
