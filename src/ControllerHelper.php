@@ -126,7 +126,16 @@ trait ControllerHelper
             if ($filter_type == 'like') {
                 $filter_value = "%{$filter_value}%";
             }
-            $models = $models->where($filter_field, $filter_type, $filter_value);
+
+            // 关联查询
+            if (strpos($filter_field, '.')) {
+                $fields = explode('.', $filter_field);
+                $models = $models->whereHas($fields[0], function ($query) use ($fields, $filter_type, $filter_value){
+                    $query->where($fields[1], $filter_type, $filter_value);
+                });
+            } else {
+                $models = $models->where($filter_field, $filter_type, $filter_value);
+            }
         }
 
         // 多字段过滤
@@ -139,7 +148,16 @@ trait ControllerHelper
                     if ($filter[1] == 'like') {
                         $filter[2] = "%{$filter[2]}%";
                     }
-                    $models = $models->where($filter[0], $filter[1], $filter[2]);
+
+                    // 关联查询
+                    if (strpos($filter[0], '.')) {
+                        $fields = explode('.', $filter[0]);
+                        $models = $models->whereHas($fields[0], function ($query) use ($fields, $filter){
+                            $query->where($fields[1], $filter[1], $filter[2]);
+                        });
+                    } else {
+                        $models = $models->where($filter[0], $filter[1], $filter[2]);
+                    }
                 }
             }
         }
