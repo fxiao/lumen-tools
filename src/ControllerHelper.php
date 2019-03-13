@@ -131,7 +131,7 @@ trait ControllerHelper
             if (strpos($filter_field, '.')) {
                 $fields = explode('.', $filter_field);
                 $models = $models->whereHas($fields[0], function ($query) use ($fields, $filter_type, $filter_value){
-                    $query->where($fields[1], $filter_type, $filter_value);
+                    $query->where(join('.', array_slice($fields, 1)), $filter_type, $filter_value);
                 });
             } else {
                 $models = $models->where($filter_field, $filter_type, $filter_value);
@@ -153,7 +153,7 @@ trait ControllerHelper
                     if (strpos($filter[0], '.')) {
                         $fields = explode('.', $filter[0]);
                         $models = $models->whereHas($fields[0], function ($query) use ($fields, $filter){
-                            $query->where($fields[1], $filter[1], $filter[2]);
+                            $query->where(join('.', array_slice($fields, 1)), $filter[1], $filter[2]);
                         });
                     } else {
                         $models = $models->where($filter[0], $filter[1], $filter[2]);
