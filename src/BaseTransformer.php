@@ -91,7 +91,7 @@ class BaseTransformer extends TransformerAbstract
 
         // 过滤
         $where = $params->get('where');
-        if (count($where) == 2){
+        if (is_array($where) && count($where) == 2){
             list($field, $value) = $where;
             $relations = $relations->where($field, $value);
         }
