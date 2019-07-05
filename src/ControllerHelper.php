@@ -106,6 +106,10 @@ trait ControllerHelper
         $order_by_type = $request->get('order_by_type', 'desc');
         $multiple_orders = $request->get('multiple_orders', false);
 
+        if(!$multiple_orders) {
+            $multiple_orders = $request->get('order', false);
+        }
+
         if(!$multiple_orders !== false) {
             $models = $models->orderBy($order_by_field, $order_by_type);
         } else {
@@ -140,6 +144,11 @@ trait ControllerHelper
 
         // 多字段过滤
         $multiple_filters = $request->get('multiple_filters', false);
+
+        if (!$multiple_filters) {
+            $multiple_filters = $request->get('filter', false);
+        }
+
         if($multiple_filters !== false) {
             $mf_list = explode(',', $multiple_filters);
             foreach($mf_list as $mf) {
