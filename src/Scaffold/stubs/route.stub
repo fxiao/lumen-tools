@@ -17,7 +17,6 @@ $api = app('Dingo\Api\Routing\Router');
 $api->version('v1', [
     'namespace' => 'DummyControllerNamespace',
     'middleware' => [
-        'serializer',
         'api.throttle',
     ],
     // each route have a limit of 20 of 1 minutes
