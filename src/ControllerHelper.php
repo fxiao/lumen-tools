@@ -74,6 +74,20 @@ trait ControllerHelper
     }
 
     /**
+     * 当前登录用户的数据
+     * 用户表关键字为 id，当前数据的相关字段为 user_id
+     * @param $request Illuminate\Http\Request
+     */
+    public function current(Request $request)
+    {
+        if($user = \Auth::user()) {
+            $this->model = $this->model->where('user_id', $user->id);
+        }
+
+        return $this->index($request);
+    }
+
+    /**
      * 字段相关处理
      */
     protected function transformer(Request $request)
