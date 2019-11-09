@@ -48,7 +48,7 @@ if (! function_exists('require_dir')) {
                 }
 
                 $tmp_f = explode('.', $file);
-                if (in_array(end($tmp_f), ['swp', 'swo'])) {
+                if (end($tmp_f) != 'php') {
                     continue;
                 }
 
