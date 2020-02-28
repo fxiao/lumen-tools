@@ -36,12 +36,17 @@ $api->version('v1', [
             'uses' => 'DummyController@index',
         ]);
 
+        $api->get('DummyRoute/current', [
+            'as' => 'DummyPxRoute.current',
+            'uses' => 'DummyController@current',
+        ]);
+
         $api->get('DummyRoute/{id}', [
             'as' => 'DummyPxRoute.show',
             'uses' => 'DummyController@show',
         ]);
 
-        $api->patch('DummyRoute/{id}', [
+        $api->put('DummyRoute/{id}', [
             'as' => 'DummyPxRoute.update',
             'uses' => 'DummyController@update',
         ]);
