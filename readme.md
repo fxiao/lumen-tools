@@ -33,10 +33,10 @@
 
 ## 依赖
 
-- PHP >= 7.1
-- Lumen >= 5.5
-- tymon/jwt-auth 1.0.0-rc.3
-- dingo/api >= 2.0
+- PHP >= 7.2
+- Lumen >= 6.0
+- tymon/jwt-auth 1.0.0-rc.5.1
+- dingo/api >= 2.4
 
 ## 安装
 
@@ -68,3 +68,5 @@ DEV_HELPERS_ROUTE_PATH=
 URL：`/dev-helpers`
 
 表名 为复数，生成的模型和控制器名称自动转换为 单数
+
+`P.S. 建议表名为单数`
