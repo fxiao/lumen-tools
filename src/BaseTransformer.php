@@ -4,6 +4,7 @@ namespace Fxiao\LumenTools;
 
 use League\Fractal\ParamBag;
 use League\Fractal\TransformerAbstract;
+use Illuminate\Support\Arr;
 
 class BaseTransformer extends TransformerAbstract
 {
@@ -60,12 +61,12 @@ class BaseTransformer extends TransformerAbstract
     {
         if($this->withShowFields) {
             // 先过滤是否是 相关字段
-            $array = array_only($array, $this->withShowFields);
+            $array = Arr::only($array, $this->withShowFields);
         }
 
         if($this->withHideFields) {
             // 先过滤是否是 相关字段
-            $array = array_except($array, $this->withHideFields);
+            $array = Arr::except($array, $this->withHideFields);
         }
 
         return $array;

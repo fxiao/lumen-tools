@@ -11,6 +11,8 @@ use Fxiao\LumenTools\Scaffold\TransformerCreator;
 use Fxiao\LumenTools\Scaffold\MigrationCreator;
 use Fxiao\LumenTools\Scaffold\RouteCreator;
 
+use Illuminate\Support\Str;
+
 class HelpersController extends Controller
 {
     protected $msg = false;
@@ -37,8 +39,8 @@ class HelpersController extends Controller
         try {
 
             $table_name = $request->get('table_name'); 
-            $name = str_singular($table_name); 
-            $class_name = studly_case($name); 
+            $name = Str::singular($table_name); 
+            $class_name = Str::studly($name); 
             $relations = $request->get('relations', []);
 
             $model_name = (env('DEV_HELPERS_MODELS_PATH', 'App\\Models\\') 

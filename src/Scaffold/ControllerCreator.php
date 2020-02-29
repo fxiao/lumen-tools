@@ -2,6 +2,8 @@
 
 namespace Fxiao\LumenTools\Scaffold;
 
+use Illuminate\Support\Arr;
+
 class ControllerCreator
 {
     /**
@@ -199,7 +201,7 @@ class ControllerCreator
                 'integer', 'tinyInteger', 'smallInteger', 'mediumInteger', 'bigInteger', 'unsignedTinyInteger', 'unsignedSmallInteger', 'unsignedMediumInteger', 'unsignedInteger', 'unsignedBigInteger'
             ]) ? 'integer': 'string';
             $rows_store_rule[] = "'{$field['name']}' => '" 
-                . (array_get($field, 'nullable') == 'on' ? '' : 'required|')
+                . (Arr::get($field, 'nullable') == 'on' ? '' : 'required|')
                 . "{$field_type}',\n";
             $rows_update_rule[] = "'{$field['name']}' => '{$field_type}',\n";
         }

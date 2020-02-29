@@ -281,7 +281,7 @@ class ModelCreator
 
     protected function dummyFunction($relation)
     {
-        $class_name = studly_case(str_singular($relation['relation']));
+        $class_name = Str::studly(Str::singular($relation['relation']));
         $func_name = lcfirst($class_name);
         $relation_name = $relation['type'];
 
