@@ -1,0 +1,5 @@
+<map id="withParamBagShow" name="withParamBagShow">
+<area shape="rect" id="node1" title="include 中字段显示过滤处理 @detail URI：xxxx?include=xx:show(field|field|field):hide(field|field|field)" alt="" coords="5,31,147,56"/>
+<area shape="rect" id="node2" href="$classFxiao_1_1LumenTools_1_1BaseTransformer.html#aa8f93461b21c79c9d032a0b563066b77" title="隐藏字段处理" alt="" coords="198,5,244,31"/>
+<area shape="rect" id="node3" href="$classFxiao_1_1LumenTools_1_1BaseTransformer.html#a1cea8fa152d622c321b4558f93288e98" title="只显示字段处理" alt="" coords="195,55,247,80"/>
+</map>

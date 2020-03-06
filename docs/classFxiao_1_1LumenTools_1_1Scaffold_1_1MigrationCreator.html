@@ -1,0 +1,331 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lumen 快速开发工具包: MigrationCreator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lumen 快速开发工具包
+   &#160;<span id="projectnumber">v1.2.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">MigrationCreator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="dynheader">
+类 MigrationCreator 继承关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator__inherit__graph.png" border="0" usemap="#MigrationCreator_inherit__map" alt="Inheritance graph"/></div>
+<map name="MigrationCreator_inherit__map" id="MigrationCreator_inherit__map">
+<area shape="rect" title=" " alt="" coords="21,79,141,104"/>
+<area shape="rect" title=" " alt="" coords="5,5,156,31"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<div class="dynheader">
+MigrationCreator 的协作图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator__coll__graph.png" border="0" usemap="#MigrationCreator_coll__map" alt="Collaboration graph"/></div>
+<map name="MigrationCreator_coll__map" id="MigrationCreator_coll__map">
+<area shape="rect" title=" " alt="" coords="21,79,141,104"/>
+<area shape="rect" title=" " alt="" coords="5,5,156,31"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">图例</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:aa9c133635ca9d16109063eca40dde8d3"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html#aa9c133635ca9d16109063eca40dde8d3">create</a> ($name, $path, $table=null, $create=true)</td></tr>
+<tr class="separator:aa9c133635ca9d16109063eca40dde8d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278cde95519d0d8c459bf74bc0ed1d2b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html#a278cde95519d0d8c459bf74bc0ed1d2b">buildBluePrint</a> ($fields=[], $keyName='id', $useTimestamps=true, $softDeletes=false)</td></tr>
+<tr class="separator:a278cde95519d0d8c459bf74bc0ed1d2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:adcb19b91646ce3b89a4be788757dd34c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html#adcb19b91646ce3b89a4be788757dd34c">populateStub</a> ($name, $stub, $table)</td></tr>
+<tr class="separator:adcb19b91646ce3b89a4be788757dd34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:a4b201d34175cd7bd08be9a4bdcbe69b5"><td class="memItemLeft" align="right" valign="top"><a id="a4b201d34175cd7bd08be9a4bdcbe69b5"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$bluePrint</b> = ''</td></tr>
+<tr class="separator:a4b201d34175cd7bd08be9a4bdcbe69b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="a278cde95519d0d8c459bf74bc0ed1d2b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a278cde95519d0d8c459bf74bc0ed1d2b">&#9670;&nbsp;</a></span>buildBluePrint()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">buildBluePrint </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fields</em> = <code>[]</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$keyName</em> = <code>'id'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$useTimestamps</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$softDeletes</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Build the table blueprint.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">array</td><td class="paramname">$fields</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$keyName</td><td></td></tr>
+    <tr><td class="paramtype">bool&#160;|&#160;true</td><td class="paramname">$useTimestamps</td><td></td></tr>
+    <tr><td class="paramtype">bool&#160;|&#160;false</td><td class="paramname">$softDeletes</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa9c133635ca9d16109063eca40dde8d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9c133635ca9d16109063eca40dde8d3">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">create </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$path</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$table</em> = <code>null</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$create</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new model.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$path</td><td></td></tr>
+    <tr><td class="paramtype">null</td><td class="paramname">$table</td><td></td></tr>
+    <tr><td class="paramtype">bool&#160;|&#160;true</td><td class="paramname">$create</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>string </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html#adcb19b91646ce3b89a4be788757dd34c">MigrationCreator\populateStub()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_aa9c133635ca9d16109063eca40dde8d3_cgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_aa9c133635ca9d16109063eca40dde8d3_cgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_aa9c133635ca9d16109063eca40dde8d3_cgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_aa9c133635ca9d16109063eca40dde8d3_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,64,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html#adcb19b91646ce3b89a4be788757dd34c" title=" " alt="" coords="112,5,212,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="adcb19b91646ce3b89a4be788757dd34c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adcb19b91646ce3b89a4be788757dd34c">&#9670;&nbsp;</a></span>populateStub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">populateStub </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$table</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Populate stub.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$table</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>mixed </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html#aa9c133635ca9d16109063eca40dde8d3">MigrationCreator\create()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_adcb19b91646ce3b89a4be788757dd34c_icgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_adcb19b91646ce3b89a4be788757dd34c_icgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_adcb19b91646ce3b89a4be788757dd34c_icgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator_adcb19b91646ce3b89a4be788757dd34c_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,212,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html#aa9c133635ca9d16109063eca40dde8d3" title=" " alt="" coords="5,5,64,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/Scaffold/MigrationCreator.php</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Fxiao</b></li><li class="navelem"><b>LumenTools</b></li><li class="navelem"><b>Scaffold</b></li><li class="navelem"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1MigrationCreator.html">MigrationCreator</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>

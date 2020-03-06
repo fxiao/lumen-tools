@@ -1,0 +1,769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.16"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Lumen 快速开发工具包: ModelCreator类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+  $(document).ready(initResizable);
+/* @license-end */</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Lumen 快速开发工具包
+   &#160;<span id="projectnumber">v1.2.2</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.16 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html','');});
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pro-methods">Protected 成员函数</a> &#124;
+<a href="#pro-attribs">Protected 属性</a>  </div>
+  <div class="headertitle">
+<div class="title">ModelCreator类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0011ef4646b524bfcdfa82b9d7794c2c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a0011ef4646b524bfcdfa82b9d7794c2c">__construct</a> ($tableName, $name, $files=null)</td></tr>
+<tr class="separator:a0011ef4646b524bfcdfa82b9d7794c2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac9da4110515aaa1a78d357462f4bd8c9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ac9da4110515aaa1a78d357462f4bd8c9">create</a> ($fields, $keyName='id', $timestamps=true, $softDeletes=false, $relations=false)</td></tr>
+<tr class="separator:ac9da4110515aaa1a78d357462f4bd8c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9064b9a2d2c07d495f124c894c7d0a46"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a9064b9a2d2c07d495f124c894c7d0a46">getPath</a> ($name)</td></tr>
+<tr class="separator:a9064b9a2d2c07d495f124c894c7d0a46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79f13b2d9f4a472f9bc5e19a5b867b86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a79f13b2d9f4a472f9bc5e19a5b867b86">replaceSpace</a> ($stub)</td></tr>
+<tr class="separator:a79f13b2d9f4a472f9bc5e19a5b867b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7710ae2fee4479d0a0aade3e3e1823a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ae7710ae2fee4479d0a0aade3e3e1823a">getStub</a> ()</td></tr>
+<tr class="separator:ae7710ae2fee4479d0a0aade3e3e1823a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected 成员函数</h2></td></tr>
+<tr class="memitem:af498c2db198760e67cd73ec5f8c96a85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#af498c2db198760e67cd73ec5f8c96a85">getNamespace</a> ($name)</td></tr>
+<tr class="separator:af498c2db198760e67cd73ec5f8c96a85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac4346142eecc2cb019851bd81ca699"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a9ac4346142eecc2cb019851bd81ca699">replaceFill</a> (&amp;$stub, $fields)</td></tr>
+<tr class="separator:a9ac4346142eecc2cb019851bd81ca699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6646b50ca5b98f54a24d98b0f8db534d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a6646b50ca5b98f54a24d98b0f8db534d">replaceClass</a> (&amp;$stub, $name)</td></tr>
+<tr class="separator:a6646b50ca5b98f54a24d98b0f8db534d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4055e676a6d453006fad361c2227ad89"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a4055e676a6d453006fad361c2227ad89">replaceNamespace</a> (&amp;$stub, $name)</td></tr>
+<tr class="separator:a4055e676a6d453006fad361c2227ad89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a076c5877013587b1b335de11c049f88b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a076c5877013587b1b335de11c049f88b">replaceSoftDeletes</a> (&amp;$stub, $softDeletes)</td></tr>
+<tr class="separator:a076c5877013587b1b335de11c049f88b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a38e693e3a552c1994090279a5ccefc8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a38e693e3a552c1994090279a5ccefc8c">replacePrimaryKey</a> (&amp;$stub, $keyName)</td></tr>
+<tr class="separator:a38e693e3a552c1994090279a5ccefc8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f5cdfe23bed4f7d4e40ef039faf1f30"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a4f5cdfe23bed4f7d4e40ef039faf1f30">replaceTable</a> (&amp;$stub, $name)</td></tr>
+<tr class="separator:a4f5cdfe23bed4f7d4e40ef039faf1f30"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6990c6ec6162792226539ecd04c4239f"><td class="memItemLeft" align="right" valign="top"><a id="a6990c6ec6162792226539ecd04c4239f"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>replaceRelations</b> (&amp;$stub, $relations)</td></tr>
+<tr class="separator:a6990c6ec6162792226539ecd04c4239f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad60a6451f57cb62bb65b077a6552af10"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ad60a6451f57cb62bb65b077a6552af10">replaceTimestamp</a> (&amp;$stub, $timestamps)</td></tr>
+<tr class="separator:ad60a6451f57cb62bb65b077a6552af10"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e964a8272c8329f61476b82bc40c25a"><td class="memItemLeft" align="right" valign="top"><a id="a1e964a8272c8329f61476b82bc40c25a"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>dummyFunction</b> ($relation)</td></tr>
+<tr class="separator:a1e964a8272c8329f61476b82bc40c25a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected 属性</h2></td></tr>
+<tr class="memitem:aea06aaf672e3fe5fbf45958ae2782244"><td class="memItemLeft" align="right" valign="top"><a id="aea06aaf672e3fe5fbf45958ae2782244"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$tableName</b></td></tr>
+<tr class="separator:aea06aaf672e3fe5fbf45958ae2782244"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab2fc40d43824ea3e1ce5d86dee0d763b"><td class="memItemLeft" align="right" valign="top"><a id="ab2fc40d43824ea3e1ce5d86dee0d763b"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$name</b></td></tr>
+<tr class="separator:ab2fc40d43824ea3e1ce5d86dee0d763b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9590b15215a21e9b42eb546aeef79704"><td class="memItemLeft" align="right" valign="top"><a id="a9590b15215a21e9b42eb546aeef79704"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>$files</b></td></tr>
+<tr class="separator:a9590b15215a21e9b42eb546aeef79704"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">构造及析构函数说明</h2>
+<a id="a0011ef4646b524bfcdfa82b9d7794c2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0011ef4646b524bfcdfa82b9d7794c2c">&#9670;&nbsp;</a></span>__construct()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">__construct </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$tableName</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$files</em> = <code>null</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html">ModelCreator</a> constructor.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$tableName</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+    <tr><td class="paramtype">null</td><td class="paramname">$files</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">成员函数说明</h2>
+<a id="ac9da4110515aaa1a78d357462f4bd8c9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac9da4110515aaa1a78d357462f4bd8c9">&#9670;&nbsp;</a></span>create()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">create </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fields</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$keyName</em> = <code>'id'</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$timestamps</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$softDeletes</em> = <code>false</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$relations</em> = <code>false</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Create a new migration file.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$keyName</td><td></td></tr>
+    <tr><td class="paramtype">bool&#160;|&#160;true</td><td class="paramname">$timestamps</td><td></td></tr>
+    <tr><td class="paramtype">bool&#160;|&#160;false</td><td class="paramname">$softDeletes</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>异常</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname"></td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="reference">引用了 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ae7710ae2fee4479d0a0aade3e3e1823a">ModelCreator\getStub()</a> , 以及 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a9ac4346142eecc2cb019851bd81ca699">ModelCreator\replaceFill()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ac9da4110515aaa1a78d357462f4bd8c9_cgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ac9da4110515aaa1a78d357462f4bd8c9_cgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ac9da4110515aaa1a78d357462f4bd8c9_cgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ac9da4110515aaa1a78d357462f4bd8c9_cgraph">
+<area shape="rect" title=" " alt="" coords="5,31,64,56"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ae7710ae2fee4479d0a0aade3e3e1823a" title=" " alt="" coords="119,5,186,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a9ac4346142eecc2cb019851bd81ca699" title=" " alt="" coords="112,55,194,80"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af498c2db198760e67cd73ec5f8c96a85"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af498c2db198760e67cd73ec5f8c96a85">&#9670;&nbsp;</a></span>getNamespace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">getNamespace </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get namespace of giving class full name.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>string </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a6646b50ca5b98f54a24d98b0f8db534d">ModelCreator\replaceClass()</a>, <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a4055e676a6d453006fad361c2227ad89">ModelCreator\replaceNamespace()</a> , 以及 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a4f5cdfe23bed4f7d4e40ef039faf1f30">ModelCreator\replaceTable()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_af498c2db198760e67cd73ec5f8c96a85_icgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_af498c2db198760e67cd73ec5f8c96a85_icgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_af498c2db198760e67cd73ec5f8c96a85_icgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_af498c2db198760e67cd73ec5f8c96a85_icgraph">
+<area shape="rect" title=" " alt="" coords="190,55,301,80"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a6646b50ca5b98f54a24d98b0f8db534d" title=" " alt="" coords="24,5,123,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a4055e676a6d453006fad361c2227ad89" title=" " alt="" coords="5,55,142,80"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#a4f5cdfe23bed4f7d4e40ef039faf1f30" title=" " alt="" coords="25,104,122,129"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9064b9a2d2c07d495f124c894c7d0a46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9064b9a2d2c07d495f124c894c7d0a46">&#9670;&nbsp;</a></span>getPath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getPath </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get path for model file.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>string </dd></dl>
+
+</div>
+</div>
+<a id="ae7710ae2fee4479d0a0aade3e3e1823a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7710ae2fee4479d0a0aade3e3e1823a">&#9670;&nbsp;</a></span>getStub()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">getStub </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get stub path of model.</p>
+<dl class="section return"><dt>返回</dt><dd>string </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ac9da4110515aaa1a78d357462f4bd8c9">ModelCreator\create()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ae7710ae2fee4479d0a0aade3e3e1823a_icgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ae7710ae2fee4479d0a0aade3e3e1823a_icgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ae7710ae2fee4479d0a0aade3e3e1823a_icgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_ae7710ae2fee4479d0a0aade3e3e1823a_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,179,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ac9da4110515aaa1a78d357462f4bd8c9" title=" " alt="" coords="5,5,64,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a6646b50ca5b98f54a24d98b0f8db534d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6646b50ca5b98f54a24d98b0f8db534d">&#9670;&nbsp;</a></span>replaceClass()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">replaceClass </td>
+          <td>(</td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace class dummy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>$this </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#af498c2db198760e67cd73ec5f8c96a85">ModelCreator\getNamespace()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a6646b50ca5b98f54a24d98b0f8db534d_cgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a6646b50ca5b98f54a24d98b0f8db534d_cgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a6646b50ca5b98f54a24d98b0f8db534d_cgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a6646b50ca5b98f54a24d98b0f8db534d_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,104,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#af498c2db198760e67cd73ec5f8c96a85" title=" " alt="" coords="152,5,263,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9ac4346142eecc2cb019851bd81ca699"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac4346142eecc2cb019851bd81ca699">&#9670;&nbsp;</a></span>replaceFill()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">replaceFill </td>
+          <td>(</td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$fields</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace fill dummy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$fields</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>$this </dd></dl>
+
+<p class="reference">被这些函数引用 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ac9da4110515aaa1a78d357462f4bd8c9">ModelCreator\create()</a>.</p>
+<div class="dynheader">
+这是这个函数的调用关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a9ac4346142eecc2cb019851bd81ca699_icgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a9ac4346142eecc2cb019851bd81ca699_icgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a9ac4346142eecc2cb019851bd81ca699_icgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a9ac4346142eecc2cb019851bd81ca699_icgraph">
+<area shape="rect" title=" " alt="" coords="112,5,194,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#ac9da4110515aaa1a78d357462f4bd8c9" title=" " alt="" coords="5,5,64,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4055e676a6d453006fad361c2227ad89"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4055e676a6d453006fad361c2227ad89">&#9670;&nbsp;</a></span>replaceNamespace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">replaceNamespace </td>
+          <td>(</td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace namespace dummy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>$this </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#af498c2db198760e67cd73ec5f8c96a85">ModelCreator\getNamespace()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4055e676a6d453006fad361c2227ad89_cgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4055e676a6d453006fad361c2227ad89_cgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4055e676a6d453006fad361c2227ad89_cgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4055e676a6d453006fad361c2227ad89_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,142,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#af498c2db198760e67cd73ec5f8c96a85" title=" " alt="" coords="190,5,301,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a38e693e3a552c1994090279a5ccefc8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a38e693e3a552c1994090279a5ccefc8c">&#9670;&nbsp;</a></span>replacePrimaryKey()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">replacePrimaryKey </td>
+          <td>(</td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$keyName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace primarykey dummy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$keyName</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>$this </dd></dl>
+
+</div>
+</div>
+<a id="a076c5877013587b1b335de11c049f88b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a076c5877013587b1b335de11c049f88b">&#9670;&nbsp;</a></span>replaceSoftDeletes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">replaceSoftDeletes </td>
+          <td>(</td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$softDeletes</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace soft-deletes dummy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">bool</td><td class="paramname">$softDeletes</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>$this </dd></dl>
+
+</div>
+</div>
+<a id="a79f13b2d9f4a472f9bc5e19a5b867b86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79f13b2d9f4a472f9bc5e19a5b867b86">&#9670;&nbsp;</a></span>replaceSpace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">replaceSpace </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$stub</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Replace spaces.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>mixed </dd></dl>
+
+</div>
+</div>
+<a id="a4f5cdfe23bed4f7d4e40ef039faf1f30"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f5cdfe23bed4f7d4e40ef039faf1f30">&#9670;&nbsp;</a></span>replaceTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">replaceTable </td>
+          <td>(</td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace Table name dummy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">string</td><td class="paramname">$name</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>$this </dd></dl>
+
+<p class="reference">引用了 <a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#af498c2db198760e67cd73ec5f8c96a85">ModelCreator\getNamespace()</a>.</p>
+<div class="dynheader">
+函数调用图:</div>
+<div class="dyncontent">
+<div class="center"><img src="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4f5cdfe23bed4f7d4e40ef039faf1f30_cgraph.png" border="0" usemap="#classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4f5cdfe23bed4f7d4e40ef039faf1f30_cgraph" alt=""/></div>
+<map name="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4f5cdfe23bed4f7d4e40ef039faf1f30_cgraph" id="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator_a4f5cdfe23bed4f7d4e40ef039faf1f30_cgraph">
+<area shape="rect" title=" " alt="" coords="5,5,102,31"/>
+<area shape="rect" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html#af498c2db198760e67cd73ec5f8c96a85" title=" " alt="" coords="150,5,261,31"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="ad60a6451f57cb62bb65b077a6552af10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad60a6451f57cb62bb65b077a6552af10">&#9670;&nbsp;</a></span>replaceTimestamp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">replaceTimestamp </td>
+          <td>(</td>
+          <td class="paramtype">&amp;&#160;</td>
+          <td class="paramname"><em>$stub</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>$timestamps</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Replace timestamps dummy.</p>
+<dl class="params"><dt>参数</dt><dd>
+  <table class="params">
+    <tr><td class="paramtype">string</td><td class="paramname">$stub</td><td></td></tr>
+    <tr><td class="paramtype">bool</td><td class="paramname">$timestamps</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>返回</dt><dd>$this </dd></dl>
+
+</div>
+</div>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>src/Scaffold/ModelCreator.php</li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>Fxiao</b></li><li class="navelem"><b>LumenTools</b></li><li class="navelem"><b>Scaffold</b></li><li class="navelem"><a class="el" href="classFxiao_1_1LumenTools_1_1Scaffold_1_1ModelCreator.html">ModelCreator</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.16 </li>
+  </ul>
+</div>
+</body>
+</html>
