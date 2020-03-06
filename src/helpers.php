@@ -1,9 +1,8 @@
 <?php
 
-// 获取当前登录用户
 if (! function_exists('auth_user')) {
     /**
-     * Get the auth_user.
+     * @brief 获取当前登录用户
      *
      * @return mixed
      */
@@ -15,7 +14,7 @@ if (! function_exists('auth_user')) {
 
 if (! function_exists('trans')) {
     /**
-     * Translate the given message.
+     * @brief Translate the given message.
      *
      * @param string $id
      * @param array  $parameters
@@ -36,8 +35,7 @@ if (! function_exists('trans')) {
 
 if (! function_exists('require_dir')) {
     /**
-     * 加载目录
-     *
+     * @brief 加载目录
      * @param string $path
      */
     function require_dir($path) {
@@ -83,7 +81,7 @@ if (! function_exists('empty_safe')) {
 
 if (! function_exists('str_equal')) {
     /**
-     * 字符对比
+     * @brief 字符对比
      */
     function str_equal($foo = null, $bar = null) : bool {
         if (empty_safe($foo) || empty_safe($bar) || !is_scalar($foo) || !is_scalar($bar)) {
@@ -96,7 +94,7 @@ if (! function_exists('str_equal')) {
 
 if (! function_exists('time_diff')) {
     /**
-     * 两个日期相差的天时分秒
+     * @brief 两个日期相差的天时分秒
      */
     function time_diff($timestamp1, $timestamp2) {
         if ($timestamp2 <= $timestamp1){
@@ -131,6 +129,9 @@ if (! function_exists('time_diff')) {
 }
 
 if (! function_exists('is_phone')) {
+    /**
+     * @brief 手机号判断
+     */
     function is_phone(string $phone = null) : bool {
         return $phone && is_numeric($phone) && (12000000000 <= $phone) && ($phone <= 19999999999);
     }

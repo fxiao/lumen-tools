@@ -1,9 +1,15 @@
 <?php
-
+/**
+ * @file LumenToolsServiceProvider.php
+ * @brief LumenToolsServiceProvider Lumen 注入类
+ */
 namespace Fxiao\LumenTools;
 
 use Illuminate\Support\ServiceProvider;
 
+/**
+ * @brief LumenToolsServiceProvider Lumen 注入类
+ */
 class LumenToolsServiceProvider extends ServiceProvider
 {
     public function boot()

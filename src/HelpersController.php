@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * @file HelpersController.php
+ * @brief 脚手架 控制类
+ */
 namespace Fxiao\LumenTools;
 
 use Illuminate\Http\Request;
@@ -13,10 +16,19 @@ use Fxiao\LumenTools\Scaffold\RouteCreator;
 
 use Illuminate\Support\Str;
 
+/**
+ * @brief 脚手架 控制类
+ */
 class HelpersController extends Controller
 {
+    /**
+     * @brief 信息
+     */
     protected $msg = false;
 
+    /**
+     * @brief 显示页面
+     */
     public function index(Request $request)
     {
         /*
@@ -31,6 +43,9 @@ class HelpersController extends Controller
         return app('files')->get(__DIR__.'/dev-helpers.html');
     }
 
+    /**
+     * @brief 提交处理
+     */
     public function store(Request $request)
     {
         $paths = [];

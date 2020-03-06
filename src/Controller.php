@@ -1,17 +1,27 @@
 <?php
-
+/**
+ * @file Controller.php
+ * @brief Controller 基础类
+ */
 namespace Fxiao\LumenTools;
 
 use Laravel\Lumen\Routing\Controller as BaseController;
 use Dingo\Api\Routing\Helpers;
 use Dingo\Api\Exception\ValidationHttpException;
 
+/**
+ * @brief Controller 基础类
+ */
 class Controller extends BaseController
 {
-    // 接口帮助调用
+    /**
+     * @brief 接口帮助调用
+     */
     use Helpers;
 
-    // 返回错误的请求
+    /**
+     * @brief 返回错误的请求
+     */
     protected function errorBadRequest($validator)
     {
         // github like error messages

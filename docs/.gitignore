@@ -1,0 +1,81 @@
+# Laravel
+#########
+/node_modules
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.phpintel
+/.vagrant
+/.php_cs.dist
+/.styleci.yml
+/.phplint.yml
+Homestead.json
+Homestead.yaml
+
+#composer.lock
+#composer.json
+
+# Env && Config related
+/.docker-sync
+docker-sync.yml
+docker-compose.yml
+.env
+#config/*.php
+config/key
+config/service/*.php
+config/list/*.php
+!config/service/*.sample
+!config/key/.gitkeep
+!config/list/.gitkeep
+
+database/fakers.php
+
+# compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+# Packages #
+############
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+# Logs and databases #
+######################
+npm-debug.log
+yarn-error.log
+*.log
+*.sqlite
+# OS generated files #
+######################
+.DS_Store*
+ehthumbs.db
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+Thumbs.db
+.svn
+*.bak
+ehthumbs.db
+Runtime
+*.swp
+*.swo
+tags
+.user.ini
+public/bgImage.png
+public/qrcode
+public/.htaccess

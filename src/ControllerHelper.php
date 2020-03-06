@@ -1,17 +1,48 @@
 <?php
-
+/**
+ * @file ControllerHelper.php
+ * @brief ControllerHelper trait 类
+ */
 namespace Fxiao\LumenTools;
 
 use Illuminate\Http\Request;
 
+/**
+ * @brief ControllerHelper trait 类
+ */
 trait ControllerHelper
 {
-    protected $route_prefix; // 路由别名的前缀，如 configs.show
-    protected $model; // 主模型实例
-    protected $transformer; // 主模型对应的 Transformer
-    protected $filter_field = 'id'; // 过滤的默认字段
-    protected $per_page = 10; // 分页每页的数量，默认为 10
+    /**
+     * @brief 路由别名的前缀，如 configs.sho
+     */
+    protected $route_prefix;
 
+    /**
+     * @brief 主模型实例
+     */
+    protected $model;
+
+    /**
+     * @brief 主模型对应的 Transformer
+     */
+    protected $transformer;
+
+    /**
+     * @brief 过滤的默认字段
+     */
+    protected $filter_field = 'id';
+
+    /**
+     * @brief 分页每页的数量，默认为 10
+     */
+    protected $per_page = 10; 
+
+
+    /**
+     * @brief 列表
+     * @param $request Request
+     * @return $response json
+     */
     public function index(Request $request)
     {
         $models = $this->orderFilter($request);
@@ -24,6 +55,12 @@ trait ControllerHelper
         return $response;
     }
 
+    /**
+     * @brief 显示当前实例
+     * @param $id 当前实例ID
+     * @param $request Request
+     * @return 当前实例 json
+     */
     public function show($id, Request $request)
     {
         $model = $this->model->findOrFail($id);
@@ -31,6 +68,11 @@ trait ControllerHelper
         return $this->response->item($model, $this->transformer($request));
     }
 
+    /**
+     * @brief 添加
+     * @param $request Request
+     * @return 添加成功的实例 json
+     */
     public function store(Request $request)
     {
         $validator = $this->storeValidator($request);
@@ -49,6 +91,12 @@ trait ControllerHelper
             ->setStatusCode(201);
     }
 
+    /**
+     * @brief 修改
+     * @param $id 当前实例ID
+     * @param $request Request
+     * @return 当前实例 json
+     */
     public function update($id, Request $request)
     {
         $validator = $this->updateValidator($request);
@@ -67,6 +115,11 @@ trait ControllerHelper
         return $this->response->item($model, $this->transformer($request));
     }
 
+    /**
+     * @brief 删除
+     * @param $id 当前实例ID
+     * @return 204
+     */
     public function destroy($id)
     {
         $this->model->destroy($id);
@@ -74,7 +127,7 @@ trait ControllerHelper
     }
 
     /**
-     * 当前登录用户的数据
+     * @brief 当前登录用户的数据
      * 用户表关键字为 id，当前数据的相关字段为 user_id
      * @param $request Illuminate\Http\Request
      */
@@ -88,7 +141,7 @@ trait ControllerHelper
     }
 
     /**
-     * 字段相关处理
+     * @brief 字段相关处理
      */
     protected function transformer(Request $request)
     {
@@ -109,7 +162,7 @@ trait ControllerHelper
     }
 
     /**
-     * 过滤和排序处理
+     * @brief 过滤和排序处理
      */
     protected function orderFilter(Request $request)
     {
@@ -188,16 +241,25 @@ trait ControllerHelper
         return $models;
     }
 
+    /**
+     * @brief 字段过滤
+     */
     public function fieldOnly(Request $request)
     {
         return $request;
     }
 
+    /**
+     * @brief 添加时字段检查
+     */
     public function storeValidator(Request $request)
     {
         return \Validator::make($this->fieldOnly($request), []);
     }
 
+    /**
+     * @brief 修改时字段检查
+     */
     public function updateValidator(Request $request)
     {
         return \Validator::make($this->fieldOnly($request), []);
